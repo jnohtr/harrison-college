@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+    <h3> Class list <br></h3>
+
+    <h4> Classroom: </h4>
+
+    <table>
+        <tr>
+            <td>Building Name</td>
+            <td>Room number</td>
+            <td>Max capacity</td>
+        </tr>
+        <tr th:each="class: ${classes}">
+            <td><p th:text="${class.classroom.buildingName}"> class.classroom.buildingName </p></td>
+            <td><p th:text="${class.classroom.roomNumber}"> </p></td>
+            <td><p th:text="${class.classroom.maxCapacity}"></p></td>
+
+            <td><p th:text="${class.buildingName}"> class.classroom.buildingName </p></td>
+        </tr>
+
+    </table>
+
+
+
+</body>
+</html>

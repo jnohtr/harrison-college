@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Home</title>
+    <th:block th:insert="base :: header"></th:block>
+</head>
+<body>
+
+    <a href="/addclassroom"> Add Classroom </a>
+<div th:replace="base :: nav"></div>
+
+<!--<div class="container bg-light pl-5 pr-5">-->
+
+    <!--<h3 class="p-4">HarrisonCollege</h3>-->
+    <!--<hr/>-->
+
+    <!--<div align="center">-->
+        <!--<div class="row text-center">-->
+            <!--&lt;!&ndash;<div th:if="${not #lists.isEmpty(messages}">No content yet.</div>&ndash;&gt;-->
+            <!--<div th:each="course : ${courses}">-->
+                <!--<div class="col-sm">-->
+                    <!--<div class="space"></div>-->
+
+
+                    <!--&lt;!&ndash;<div class="img-box">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<img class="pet-img" th:src="@{${message.postImg}}" alt="post image"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<div class="pet-info-bx">&ndash;&gt;-->
+
+                        <!--&lt;!&ndash;<div class="cont-box">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div th:text="${course.subjectCode}"></div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div class="foun-box">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div th:text="${course.name}"></div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div class="foun-box">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div th:text="${course.numOfCredits}"></div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div class="foun-box">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div th:text="${course.numOfCredits}"></div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;&lt;!&ndash;<div>&ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<img id="gravatar" th:src="'http://gravatar.com/avatar/' + ${message.user.hash} + '?s=20'"&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;&lt;!&ndash;alt="gravatar"/> &ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;&lt;!&ndash;<strong><a th:href="@{/user/{id}(id=${message.user.id})}"><span&ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;&lt;!&ndash;th:text="${message.user.username}"></span></a></strong>&ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span th:text="${#dates.format(message.posteddate, 'dd MMM yyyy')}"></span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span th:text="${message.datePosted}"></span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--<div>-->
+                        <!--<span sec:authorize="hasAuthority('USER')">-->
+                            <!--<a class="btn btn-info" th:href="@{/update/{id}(id=${message.id})}">Update</a>-->
+                        <!--</span>-->
+
+                        <!--&lt;!&ndash;<span th:if="${#authentication.roles } == ${message.username}">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<a class="btn btn-info" th:href="@{/update/{id}(id=${message.id})}">Update</a>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</span>&ndash;&gt;-->
+
+                        <!--<span sec:authorize="hasAuthority('ADMIN')">-->
+                            <!--<a class="btn btn-info" th:href="@{/update/{id}(id=${message.id})}">Update</a>-->
+                        <!--</span>-->
+
+                        <!--<a class="btn btn-info" th:href="@{/detail/{id}(id=${message.id})}">View</a>-->
+
+
+                        <!--<span sec:authorize="hasAuthority('ADMIN')"><a class="btn btn-info"-->
+                                                                      <!--th:href="@{/delete/{id}(id=${message.id})}">Delete</a></span>-->
+
+                        <!--<div class="space"></div>-->
+                        <!--&lt;!&ndash;<a class="text-secondary" th:href="@{/delete/{id}(id=${message.id})}">Delete</a>&ndash;&gt;-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>&lt;!&ndash;end div row&ndash;&gt;-->
+        <!--</div>-->
+        <!--<div class="emptySpace"></div>-->
+    <!--</div>-->
+
+    <!--<footer th:replace="base :: footer"></footer>-->
+    <!--<br/>-->
+<!--</div>-->
+<!--<div class="space"></div>-->
+<!--<div th:replace="base :: scripts"></div>-->
+</body>
+</html>
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="www.thymeleaf.org">-->
+<!--<head>-->
+<!--<meta charset="UTF-8">-->
+<!--<title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h2>Insecure Page</h2>-->
+<!--<a href="/secure">Secure Page</a>-->
+
+<!--</body>-->
+<!--</html>-->
