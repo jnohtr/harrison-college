@@ -1,32 +1,122 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns:th="www.thymeleaf.org">
+<html lang="en" xmlns:th="www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8"/>
-    <title>Title</title>
+    <title>Home</title>
+    <th:block th:insert="base :: header"></th:block>
 </head>
 <body>
+    <div th:replace="base :: nav"></div>
 
-    <h3> Class list <br></h3>
+    <div class="container bg-light pl-5 pr-5">
+        <div class="space"></div>
 
-    <h4> Classroom: </h4>
+        <h3> Class list <br></h3>
 
-    <table>
-        <tr>
-            <td>Building Name</td>
-            <td>Room number</td>
-            <td>Max capacity</td>
-        </tr>
-        <tr th:each="class: ${classes}">
-            <td><p th:text="${class.classroom.buildingName}"> class.classroom.buildingName </p></td>
-            <td><p th:text="${class.classroom.roomNumber}"> </p></td>
-            <td><p th:text="${class.classroom.maxCapacity}"></p></td>
+        <!--<h4> Classroom: </h4>-->
+        <!--< Classroom: <>-->
+        Classroom:
 
-            <td><p th:text="${class.buildingName}"> class.classroom.buildingName </p></td>
-        </tr>
+        <!--<table>-->
+            <!--<tr>-->
+                <!--<td>Building Name</td>-->
+                <!--<td>Room number</td>-->
+                <!--<td>Max capacity</td>-->
+            <!--</tr>-->
+            <!--<tr th:each="class: ${classes}">-->
+                <!--<td><p th:text="${class.classroom.buildingName}"> class.classroom.buildingName </p></td>-->
+                <!--<td><p th:text="${class.classroom.roomNumber}"> </p></td>-->
+                <!--<td><p th:text="${class.classroom.maxCapacity}"></p></td>-->
 
-    </table>
+                <!--<th:block th:each="classroom : ${class.classroom}">-->
+
+                <!--&lt;!&ndash;<td><p th:text="${class.buildingName}"> class.classroom.buildingName </p></td>&ndash;&gt;-->
+                    <!--<td><p th:text="${classroom.buildingName}"> class.classroom.buildingName </p></td>-->
+                <!--</th:block>-->
+            <!--</tr>-->
+
+        <!--</table>-->
+
+        <!--<div th:each="class : ${classes}">-->
+            <!--<h2 th:text="${class.name}"></h2>-->
+
+                <!--<th:block th:each="classroom : ${class.classroom}">-->
+                    <!--<h2 th:text="${classroom.buildingName}"></h2>-->
+                <!--</th:block>-->
+        <!--</div>-->
+
+        <!--<div th:each="classroom : ${classrooms}">-->
+        <!--&lt;!&ndash;<div th:each="classroom : ${classroom}">&ndash;&gt;-->
+            <!--<h2 th:text="${classroom.buildingName}"></h2>-->
+            <!--<h2 th:text="${classroom.roomNumber}"></h2>-->
+            <!--<h2 th:text="${classroom.maxCapacity}"></h2>-->
+
+            <!--&lt;!&ndash;<th:block th:each="classroom : ${class.classroom}">&ndash;&gt;-->
+                <!--&lt;!&ndash;<h2 th:text="${classroom.buildingName}"></h2>&ndash;&gt;-->
+            <!--&lt;!&ndash;</th:block>&ndash;&gt;-->
+        <!--</div>-->
+
+        <table>
+            <tr>
+                <td>buildingName</td>
+                <td>roomNumber</td>
+                <td>maxCapacity</td>
+            </tr>
+            <tr th:each="classroom : ${classrooms}">
+                <td th:text="${classroom.buildingName}"></td>
+                <td th:text="${classroom.roomNumber}"></td>
+                <td th:text="${classroom.maxCapacity}"></td>
+
+            </tr>
+        </table>
+
+        Major :
+        <div th:each="major : ${majors}">
+            <h2 th:text="${major.name}"></h2>
+        </div>
+
+        Class :
+        <div th:each="class : ${class}">
+            <!--<h2 th:text="${class.subjectCode}"></h2>-->
+
+            <h2 th:text="${class.time}"></h2>
+            <h2 th:text="${class.crnNumber}"></h2>
+
+            <a th:href="@{/delete/{id}(id=${class.id})}"> Delete</a>
+
+            <!--<h2 th:text="${class.course.courseName}"></h2>-->
+        </div>
+
+        <table>
+            <tr>
+                <td>crnNumber</td>
+                <td>time</td>
+                <td>instructor</td>
+                <td>room</td>
+            </tr>
+            <!--<tr th:each="classroom : ${classroom}">-->
+                <!--<td th:text="${classroom.crnNumber}"></td>-->
+                <!--<td th:text="${classroom.time}"></td>-->
+            <tr th:each="class : ${class}">
+                <td th:text="${class.crnNumber}"></td>
+                <td th:text="${class.time}"></td>
+                <!--<td th:text="${classroom.}"></td>-->
+                <!--<td th:text="${classroom.}"></td>-->
+
+                <td><a th:href="@{/delete/{id}(id=${class.id})}"> Delete</a></td>
+            </tr>
+        </table>
+
+        Department :
+        <div th:each="department : ${department}">
+            <h2 th:text="${department.name}"></h2>
+        </div>
 
 
+        <a href="/addclassroom"><h3> Add classroom</h3></a>
+
+
+    </div>
+    <div class="emptySpace"></div>
 
 </body>
 </html>

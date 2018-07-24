@@ -5,11 +5,12 @@ import java.util.Collection;
 
 
 @Entity
-@Table(name="Major")
+//@Table(name="Major")
 public class Major {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    //@GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private  long id;
 
     private String name;
@@ -38,5 +39,13 @@ public class Major {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 }

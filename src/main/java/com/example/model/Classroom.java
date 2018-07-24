@@ -6,7 +6,7 @@ import java.util.Set;
 
 
 @Entity
-@Table(name="ClassroomRepository")
+//@Table(name="ClassroomRepository")
 public class Classroom {
 
     @Id

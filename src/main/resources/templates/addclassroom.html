@@ -1,23 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org">
+<html lang="en" xmlns:th="www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Home</title>
+    <th:block th:insert="base :: header"></th:block>
 </head>
 <body>
+    <div th:replace="base :: nav"></div>
 
-    <h3> Add classroom</h3>
+    <div class="container bg-light pl-5 pr-5">
+        <div class="space"></div>
 
-    <form action="#" th:action="@{/processclassroom}" th:object="${classroom}" method="post">
+        <a href="/addclassroom"><h3> Add classroom</h3></a>
 
-            BuildingName : <input type="text" th:field="*{buildingName}" /> <br>
+        <form action="#" th:action="@{/processclassroom}" th:object="${classroom}" method="post">
 
-            Roomnumber : <input type="text" th:field="*{roomNumber}" /> <br>
+                BuildingName : <input type="text" th:field="*{buildingName}" /> <br>
 
-            Maxcapacity : <input type="text" th:field="*{maxCapacity}" /> <br>
+                Roomnumber : <input type="text" th:field="*{roomNumber}" /> <br>
 
-        <input type="submit" value="Submit" />
-    </form>
+                Maxcapacity : <input type="text" th:field="*{maxCapacity}" /> <br>
+
+            <input type="submit" value="Submit" />
+        </form>
+
+        <div class="emptySpace"></div>
+    </div>
+    <div class="emptySpace"></div>
 
 </body>
 </html>

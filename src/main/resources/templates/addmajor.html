@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <!--<div class="container">-->
+
+    Add Major
+
+    <form action="#" th:action="@{/processmajor}" th:object="${major}" method="post"> @
+        Major name : <input type="text" th:field="*{name}" /> *
+
+        <input type="submit" value="Submit">
+
+
+        <!--<div class="form-group">-->
+            <!--<label for="departmentInput">Department</label>-->
+            <!--<select class="form-control" id="departmentInput" th:field="*{department_id}">-->
+                <!--<option th:each="aDepartment : ${departments}" th:value="${aDepartment.id}"-->
+                        <!--th:text="${aDepartment.name}"></option>-->
+            <!--</select>-->
+        <!--</div>-->
+
+        Department :
+
+
+    </form>
+
+
+    <!--<div class="form-group">-->
+        <!--<label for="categoryInput">Category Type</label>-->
+        <!--<select class="form-control" id="categoryInput" th:field="*{category_id}">-->
+            <!--<option th:each="aCategory : ${categories}" th:value="${aCategory.id}"-->
+                    <!--th:text="${aCategory.type}"></option>-->
+        <!--</select>-->
+    <!--</div>-->
+
+    <!--</div>-->
+
+
+</body>
+</html>
